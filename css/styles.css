@@ -8,6 +8,8 @@
   --bgc-footer-and-hero: #2f303a;
   --bgc-section-team: #f5f4fa;
   --color-contacts-footer: rgba(255, 255, 255, 0.6);
+  --bgc-sections-features-and-work-and-portfolio: #F5F5F5;
+  --bgc-header: #ECECEC;
 }
 
 /* Body */
@@ -40,7 +42,14 @@ body {
   text-align: center;
 }
 
+.section {
+  background-color: var(--bgc-sections-features-and-work);
+}
 /* Logo */
+
+header {
+  background-color: var(--bgc-header);
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -79,6 +88,7 @@ body {
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .hero .btn:hover,
@@ -99,10 +109,28 @@ body {
 
 /* Features */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+
 .features h3 {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-transform: uppercase;
 }
 
 .features p {
@@ -121,6 +149,11 @@ body {
   background-color: var(--simple-white-color);
 }
 
+.team h3,
+.team p {
+  text-align: center;
+}
+
 /* Footer */
 footer {
   background-color: var(--bgc-footer-and-hero);
@@ -129,6 +162,10 @@ footer {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.page-footer .logo {
+  color: var(--simple-white-color);
 }
 
 .page-footer a {
@@ -142,6 +179,10 @@ footer {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
+}
+
+.portfolio-section {
+  background-color: var(--bgc-sections-features-and-work-and-portfolio);
 }
 
 .portfolio-list p {
@@ -161,9 +202,33 @@ footer {
   letter-spacing: 0.03em;
 }
 
+.portfolio-list-item {
+  background-color: var(--simple-white-color);
+}
+
 .filter-button.current,
 .filter-button:hover,
 .filter-button:focus {
   color: var(--simple-white-color);
   background-color: var(--accent-color);
+}
+
+/* ---------- header ---------- */
+.logo {
+}
+.accent {
+}
+.list {
+}
+.nav {
+}
+.nav-item {
+}
+.link {
+}
+.current {
+}
+.contact {
+}
+.contact-item {
 }
