@@ -27,8 +27,7 @@ body {
   text-decoration: none;
 }
 .link:hover,
-.link:focus,
-.link:active {
+.link:focus {
   color: var(--accent-color);
 }
 
@@ -83,7 +82,6 @@ body {
 }
 
 .hero .btn:hover,
-.hero .btn:active,
 .hero .btn:focus {
   background-color: var(--bgc-hero-btn-hover);
 }
@@ -165,7 +163,6 @@ footer {
 
 .filter-button.current,
 .filter-button:hover,
-.filter-button:active,
 .filter-button:focus {
   color: var(--simple-white-color);
   background-color: var(--accent-color);
