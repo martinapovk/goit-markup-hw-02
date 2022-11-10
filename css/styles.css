@@ -8,106 +8,97 @@
   --bgc-footer-and-hero: #2f303a;
   --bgc-section-team: #f5f4fa;
   --color-contacts-footer: rgba(255, 255, 255, 0.6);
-  --bgc-sections-features-and-work-and-portfolio: #F5F5F5;
-  --bgc-header: #ECECEC;
 }
 
-/* Body */
+/* -------------Universal------------- */
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: var(--primary-text-color);
-  letter-spacing: 0.03em;
   background-color: var(--simple-white-color);
+  font-family: "Roboto";
+  font-weight: 400px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
 .list {
   list-style: none;
 }
+
 .link {
   text-decoration: none;
-}
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
+  color: inherit;
 }
 
-.hero h2,
-.work h2,
-.team h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+.btn {
+  font-family: inherit;
 }
 
-.section {
-  background-color: var(--bgc-sections-features-and-work);
-}
-/* Logo */
-
-header {
-  background-color: var(--bgc-header);
-}
+/* -------------Header------------- */
 
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
   color: var(--simple-black-color);
-  text-decoration: none;
 }
-.logo .accent {
+.accent {
   color: var(--accent-color);
 }
 
-/* Nav */
-
-.current.nav-item {
-  color: var(--accent-color);
+.nav-list-item,
+.contact-list-item {
+  font-weight: 500;
+  line-height: 1.14;
 }
-
-.nav-item {
-  color: inherit;
-}
-
-.contact-item {
+.contact-list-item {
   color: var(--secondary-text-color);
 }
 
-/* Hero */
+.nav-list-item:hover,
+.nav-list-item:focus,
+.contact-list-item:hover,
+.contact-list-item:focus {
+  color: var(--accent-color);
+}
+
+.current {
+  color: var(--accent-color);
+}
+
+/* -------------Hero------------- */
 
 .hero {
   background-color: var(--bgc-footer-and-hero);
 }
 
-.hero > .text {
-  color: var(--simple-white-color);
+.hero-text {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
+  color: var(--simple-white-color);
   text-transform: uppercase;
 }
 
-.hero .btn:hover,
-.hero .btn:focus {
-  background-color: var(--bgc-hero-btn-hover);
-}
-
-.btn {
-  color: var(--simple-white-color);
-  background-color: var(--accent-color);
+.hero-btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.06em;
-  font-family: inherit;
-  cursor: pointer;
+  color: var(--simple-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
-/* Features */
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--bgc-hero-btn-hover);
+}
+
+/* -------------Features------------- */
 
 .visually-hidden {
   position: absolute;
@@ -116,119 +107,124 @@ header {
   margin: -1px;
   border: 0;
   padding: 0;
-  
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-
-
-
-.features h3 {
+.feature-title {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.features p {
+.feature-description {
+  line-height: 1.41;
   color: var(--secondary-text-color);
-  font-size: 14px;
-  line-height: 1.71;
 }
 
-/* Team */
+/* -------------Work------------- */
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* -------------Team------------- */
 
 .team {
   background-color: var(--bgc-section-team);
 }
 
-.team li {
+.team-member {
   background-color: var(--simple-white-color);
 }
 
-.team h3,
-.team p {
+.team-member-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
   text-align: center;
 }
 
-/* Footer */
-footer {
-  background-color: var(--bgc-footer-and-hero);
+.member-position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondary-text-color);
 }
-.page-footer address {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
+
+/* -------------Footer------------- */
+
+.page-footer {
+  background-color: var(--bgc-footer-and-hero);
 }
 
 .page-footer .logo {
   color: var(--simple-white-color);
 }
 
-.page-footer a {
+.company-address,
+.company-mail,
+.company-tel {
+  line-height: 1.71;
+  font-style: normal;
   color: var(--color-contacts-footer);
 }
 
-/* Portfolio */
-.portfolio-list h2 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--primary-text-color);
+.company-address:focus,
+.company-address:hover,
+.company-mail:focus,
+.company-mail:hover,
+.company-tel:focus,
+.company-tel:hover {
+  color: var(--accent-color);
 }
 
-.portfolio-section {
-  background-color: var(--bgc-sections-features-and-work-and-portfolio);
+.company-address {
+  color: var(--simple-white-color);
 }
 
-.portfolio-list p {
-  color: var(--secondary-text-color);
-  font-size: 16px;
-  line-height: 1.88;
-}
+/* -------------Portfolio------------- */
 
-.filter-button {
-  background-color: var(--bgc-section-team);
-  color: var(--primary-text-color);
-  cursor: pointer;
-  font-family: inherit;
+.filter-btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+  border-radius: 4px;
+  background-color: var(--bgc-section-team);
+  color: var(--primary-text-color);
 }
 
-.portfolio-list-item {
-  background-color: var(--simple-white-color);
-}
-
-.filter-button.current,
-.filter-button:hover,
-.filter-button:focus {
-  color: var(--simple-white-color);
+.filter-btn:hover,
+.filter-btn:focus {
   background-color: var(--accent-color);
+  color: var(--simple-white-color);
 }
 
-/* ---------- header ---------- */
-.logo {
+.current-filter {
+  background-color: var(--accent-color);
+  color: var(--simple-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.accent {
+
+.portfolio-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
 }
-.list {
+
+.portfolio-item-description {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--secondary-text-color);
 }
-.nav {
-}
-.nav-item {
-}
-.link {
-}
-.current {
-}
-.contact {
-}
-.contact-item {
-}
+
+/* -------------Universal------------- */
+
